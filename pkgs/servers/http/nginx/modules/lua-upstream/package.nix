@@ -19,12 +19,11 @@ mkNginxPlugin (finalAttrs: {
 
   buildInputs = [ luajit_openresty ];
 
-  allowMemoryWriteExecute = true;
-
   meta = {
     description = "Expose Lua API to ngx_lua for Nginx upstreams";
     homepage = "https://github.com/openresty/lua-upstream-nginx-module";
     license = lib.licenses.bsd2;
     maintainers = [ ];
+    broken = true; # Build against nginx fails
   };
 })

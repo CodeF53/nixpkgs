@@ -6,13 +6,13 @@
 buildGoModule rec {
   __structuredAttrs = true;
   pname = "balena-compose-parser";
-  version = "0.2.6";
+  version = "0.4.0";
 
   src = fetchFromGitHub {
     owner = "balena-io-modules";
     repo = "balena-compose-parser";
     rev = "v${version}";
-    hash = "sha256-Bpcj3a689CjXmcjccyBzg30bj4+YT2FCvDvnpIy+EdY=";
+    hash = "sha256-fEvLu2xZlYoILM4DThiSQHG2gbGOB5IQVgmwcLKsKwo=";
   };
 
   modRoot = "lib";

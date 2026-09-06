@@ -5,7 +5,7 @@
 }:
 php.buildComposerProject2 (finalAttrs: {
   pname = "civicrm-core";
-  version = "6.16.2";
+  version = "6.17.3";
   __structuredAttrs = true;
   strictDeps = true;
   dontUnpack = false;
@@ -14,10 +14,10 @@ php.buildComposerProject2 (finalAttrs: {
     owner = "civicrm";
     repo = "civicrm-core";
     tag = finalAttrs.version;
-    hash = "sha256-aIjQ0d/JseuHQKrph5dD8juUnZa/Krh9L6vN4GUqncE=";
+    hash = "sha256-9BZ/xjJGvZO0V8QJV8yuZj5uRmWbS68/KF1q7Xrz5/8=";
   };
 
-  vendorHash = "sha256-cuePs/kZx+cpCvG8r9eDmccyEFfL7G9zfD5tpzD5CJE=";
+  vendorHash = "sha256-40i9jTbY7NgfHvjL1/COyRpteRfveBGkHMnv00gdem8=";
 
   installPhase = ''
     runHook preInstall

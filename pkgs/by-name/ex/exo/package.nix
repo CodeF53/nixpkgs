@@ -61,7 +61,7 @@ let
     __structuredAttrs = true;
 
     sourceRoot = "${finalAttrs.src.name}/dashboard";
-    npmDepsFetcherVersion = 3;
+    npmDepsFetcherVersion = 2;
 
     npmDeps = fetchNpmDeps {
       inherit (finalAttrs)
@@ -70,8 +70,8 @@ let
         src
         sourceRoot
         ;
-      fetcherVersion = 3;
-      hash = "sha256-gBWJP0dF2zDEWLYxfKYQSn9O5hVRkcviDv9oP267pQQ=";
+      fetcherVersion = 2;
+      hash = "sha256-d/+54lpNe0tXrC+Mrhpc1cdXOMjYblE0QByIdiaDgU0=";
     };
   });
 in
@@ -231,5 +231,9 @@ python3Packages.buildPythonApplication (finalAttrs: {
     license = lib.licenses.gpl3Only;
     maintainers = with lib.maintainers; [ GaetanLepage ];
     mainProgram = "exo";
+    knownVulnerabilities = [
+      # https://github.com/NixOS/nixpkgs/issues/538886
+      "CVE-2026-14738"
+    ];
   };
 })
